@@ -9,13 +9,11 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-environment:
-  Build Env 1
-
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  environment: 'Build Env 1'
 
 steps:
 - task: NuGetToolInstaller@1
