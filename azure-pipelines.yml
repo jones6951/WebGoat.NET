@@ -24,15 +24,6 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'cmd.exe /C "cmdkey /add:`"coverity202003.file.core.windows.net`" /user:`"Azure\coverity202003`" /pass:`"UUoFiN846Y0M25XpMZgIUPcmtieAD3xoEQSwZf4wSHDVuEqHq2wmrZEfue9sHWxk5o/y4txZcpDZ5so6D7EkNg==`""' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-- task: CmdLine@2
-  inputs:
-    script: 'powershell.exe New-PSDrive -Name Z -PSProvider FileSystem -Root "\\coverity202003.file.core.windows.net\cov2020-03"-Persist'
-
-- task: CmdLine@2
-  inputs:
     script: 'z:\c\bin\cov-generate-host-id.exe'
 
 - task: VSBuild@1
