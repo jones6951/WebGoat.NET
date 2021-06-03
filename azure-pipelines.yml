@@ -22,6 +22,10 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: CmdLine@2
+  inputs:
+    script: 'wget -q https://sipse.polaris.synopsys.com/api/tools/polaris_cli-win64.zip'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
