@@ -24,7 +24,8 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'z:\c\bin\cov-generate-host-id.exe'
+#    script: 'z:\c\bin\cov-generate-host-id.exe'
+    script: 'echo Hello World'
 
 - task: VSBuild@1
   inputs:
