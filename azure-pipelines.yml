@@ -22,17 +22,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: CmdLine@2
-  displayName: Coverity
-environment: 
-   name: Build Env 1
-   resourceType: VirtualMachine
-strategy:
-  runOnce:
-  deploy:   
-    steps:
-    - script: echo "Hello world"
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
